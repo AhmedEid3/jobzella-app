@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { Container, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 
 const Header = () => {
   return (
-    <header>
+    <Box component={'header'} sx={{ mb: { xs: '1rem', md: 0 } }}>
       <nav>
         <Container>
           <Typography component={'h1'} variant={'h1'}>
@@ -17,7 +17,7 @@ const Header = () => {
           </Typography>
         </Container>
       </nav>
-    </header>
+    </Box>
   );
 };
 

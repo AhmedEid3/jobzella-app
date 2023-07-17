@@ -45,8 +45,8 @@ const LoginForm = () => {
   return (
     <Card
       sx={{
-        py: '3rem',
-        px: '1rem',
+        py: { xs: '1rem', sm: '2rem', md: '3rem' },
+        px: { xs: '.5rem', sm: '1rem' },
         height: '100%',
         maxWidth: '500px',
         mx: 'auto',
@@ -65,7 +65,7 @@ const LoginForm = () => {
           Login
         </Typography>
 
-        <Box sx={{ mt: '2.5rem' }}>
+        <Box sx={{ mt: { xs: '1rem', md: '2.5rem' } }}>
           <Box mb={'1.5rem'}>
             <Typography
               color={'text.secondary'}
@@ -151,7 +151,7 @@ const LoginForm = () => {
             <Button
               type="submit"
               size={'large'}
-              sx={{ width: '100%', mt: '4rem' }}
+              sx={{ width: '100%', mt: { xs: '2rem', sm: '3rem', md: '4rem' } }}
               variant="contained"
             >
               Login
