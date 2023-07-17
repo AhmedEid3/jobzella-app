@@ -27,7 +27,6 @@ export default function NextAppDirEmotionCacheProvider(
   const { options, CacheProvider = DefaultCacheProvider, children } = props;
 
   const [{ cache, flush }] = useState(() => {
-    // eslint-disable-next-line @typescript-eslint/no-shadow
     const cache = createCache(options);
     cache.compat = true;
     const prevInsert = cache.insert;
@@ -39,7 +38,7 @@ export default function NextAppDirEmotionCacheProvider(
       }
       return prevInsert(...args);
     };
-    // eslint-disable-next-line @typescript-eslint/no-shadow
+
     const flush = () => {
       const prevInserted = inserted;
       inserted = [];
@@ -54,7 +53,7 @@ export default function NextAppDirEmotionCacheProvider(
       return null;
     }
     let styles = '';
-    // eslint-disable-next-line no-restricted-syntax
+
     for (const name of names) {
       styles += cache.inserted[name];
     }
@@ -62,7 +61,6 @@ export default function NextAppDirEmotionCacheProvider(
       <style
         key={cache.key}
         data-emotion={`${cache.key} ${names.join(' ')}`}
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: styles,
         }}
