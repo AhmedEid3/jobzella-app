@@ -1,6 +1,8 @@
+'use client';
+
 import { useState } from 'react';
 import { TasksDummy } from '@/models/dummy-data';
-import { Task } from '@/models/task';
+import { Task, TaskStatus } from '@/models/task';
 
 export const useTasks = () => {
   const [tasks, setTasks] = useState<Array<Task>>(TasksDummy);
@@ -16,5 +18,25 @@ export const useTasks = () => {
     setTasks(newTasks);
   };
 
-  return { tasks, addTask, updateTask };
+  const completedTasks = tasks.filter(
+    (task) => task.status === TaskStatus.DONE
+  );
+
+  const totalTasks = tasks.length;
+
+  const todoTasks = tasks.filter((task) => task.status === TaskStatus.TODO);
+
+  const inProgressTasks = tasks.filter(
+    (task) => task.status === TaskStatus.IN_PROGRESS
+  );
+
+  return {
+    tasks,
+    todoTasks,
+    totalTasks,
+    inProgressTasks,
+    completedTasks,
+    addTask,
+    updateTask,
+  };
 };

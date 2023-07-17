@@ -60,7 +60,7 @@ const Navbar = ({ onDrawerToggle }: Props) => {
             height={40}
           />
           <Box ml={'1rem'}>
-            <Typography variant="subtitle1">Hello, Ahmed Muhammed</Typography>
+            <Typography variant="subtitle1">Hello, Ahmed</Typography>
             <Typography variant="caption">
               Let’s start your tasks NOW!
             </Typography>

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { TaskGroupsDummy } from '@/models/dummy-data';
 import { TaskGroup } from '@/models/task';
