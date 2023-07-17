@@ -1,22 +1,33 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Lock, Mail, Visibility, VisibilityOff } from '@mui/icons-material';
 import {
   Box,
   Button,
   Card,
   CardContent,
+  Checkbox,
   FormControl,
+  FormControlLabel,
   IconButton,
   InputAdornment,
   InputLabel,
+  Link as MuiLink,
   OutlinedInput,
   Typography,
 } from '@mui/material';
 
 const LoginForm = () => {
+  const [rememberPassword, setRememberPAssword] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
+  const handleChangeRememberPassword = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setRememberPAssword(event.target.checked);
+  };
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -111,6 +122,31 @@ const LoginForm = () => {
                 label="Password"
               />
             </FormControl>
+
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+              }}
+            >
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={rememberPassword}
+                    onChange={handleChangeRememberPassword}
+                    inputProps={{ 'aria-label': 'remember password' }}
+                  />
+                }
+                label="Remember Me"
+                sx={{ color: 'text.secondary' }}
+              />
+
+              <MuiLink align="right" component={Link} href={'/forgot-password'}>
+                Forgot Password?
+              </MuiLink>
+            </Box>
 
             <Button
               type="submit"
