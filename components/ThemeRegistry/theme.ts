@@ -82,6 +82,14 @@ let theme = createTheme({
         },
       },
     },
+
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: '1rem',
+        },
+      },
+    },
   },
 });
 
