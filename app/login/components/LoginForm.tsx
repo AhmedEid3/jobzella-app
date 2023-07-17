@@ -45,7 +45,7 @@ const LoginForm = () => {
   return (
     <Card
       sx={{
-        py: '4rem',
+        py: '3rem',
         px: '1rem',
         height: '100%',
         maxWidth: '500px',

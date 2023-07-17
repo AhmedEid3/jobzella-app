@@ -15,7 +15,7 @@ const LoginPage = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        pb: '2rem',
+        py: '3rem',
       }}
     >
       <Header />
