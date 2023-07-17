@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import { Box, Container, Typography } from '@mui/material';
+
+import LightLogo from '@/components/Logo/LightLogo';
 
 const Header = () => {
   return (
@@ -7,13 +8,7 @@ const Header = () => {
       <nav>
         <Container>
           <Typography component={'h1'} variant={'h1'}>
-            <Image
-              priority
-              src={'/images/logo.svg'}
-              alt={'logo'}
-              width={175}
-              height={48}
-            />
+            <LightLogo />
           </Typography>
         </Container>
       </nav>
