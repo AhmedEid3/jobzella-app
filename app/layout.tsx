@@ -1,5 +1,4 @@
 import { Nunito, Roboto } from 'next/font/google';
-import Box from '@mui/material/Box';
 
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 
@@ -22,9 +21,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en">
       <body className={nunitoFont.className}>
-        <ThemeRegistry>
-          <Box component="main">{children}</Box>
-        </ThemeRegistry>
+        <ThemeRegistry>{children}</ThemeRegistry>
       </body>
     </html>
   );
