@@ -1,10 +1,16 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 declare module '@mui/material/styles' {
+  interface Palette {
+    todo: PaletteOptions['primary'];
+    progress: PaletteOptions['primary'];
+    overlay: PaletteOptions['primary'];
+  }
+
   interface PaletteOptions {
     todo: PaletteOptions['primary'];
     progress: PaletteOptions['primary'];
-    gray: PaletteOptions['primary'];
+    overlay: PaletteOptions['primary'];
   }
 
   interface TypeText {
@@ -46,7 +52,7 @@ let theme = createTheme({
       main: '#FFA500',
       light: '#FCEACA',
     },
-    gray: {
+    overlay: {
       main: '#F3F3F3',
     },
     text: {
@@ -73,6 +79,7 @@ let theme = createTheme({
       fontStyle: 'normal',
     },
   },
+
   components: {
     MuiButton: {
       styleOverrides: {
@@ -87,6 +94,17 @@ let theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: '1rem',
+        },
+      },
+    },
+
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: '.5rem',
+          '&:hover': {
+            backgroundColor: '#DBEEF5',
+          },
         },
       },
     },
