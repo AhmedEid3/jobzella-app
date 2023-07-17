@@ -57,6 +57,11 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: 'inherit',
+    h1: {
+      fontSize: '3rem',
+      fontWeight: 700,
+      fontStyle: 'normal',
+    },
     h2: {
       fontSize: '2.5rem',
       fontWeight: 700,
