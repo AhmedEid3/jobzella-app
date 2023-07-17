@@ -1,10 +1,10 @@
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Toolbar from '@mui/material/Toolbar';
 
 import DarkLogo from '@/components/Logo/DarkLogo';
 
 import TaskGroups from './TaskGroups';
+import ToolbarApp from './ToolbarApp';
 
 export const drawerWidth = 280;
 
@@ -20,9 +20,9 @@ const Sidebar = ({ mobileOpen, onDrawerToggle, window }: Props) => {
 
   const drawer = (
     <Box sx={{ backgroundColor: 'overlay.main', height: '100%' }}>
-      <Toolbar sx={{ mb: '3rem' }}>
+      <ToolbarApp sx={{ mb: '2rem' }}>
         <DarkLogo />
-      </Toolbar>
+      </ToolbarApp>
 
       <TaskGroups />
     </Box>

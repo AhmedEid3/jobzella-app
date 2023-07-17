@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 
 import Navbar from './Navbar';
 import Sidebar, { drawerWidth } from './Sidebar';
+import ToolbarApp from './ToolbarApp';
 
 export default function DashboardLayout({ children }: React.PropsWithChildren) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function DashboardLayout({ children }: React.PropsWithChildren) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
       >
-        <Toolbar />
+        <ToolbarApp />
         {children}
       </Box>
     </Box>
