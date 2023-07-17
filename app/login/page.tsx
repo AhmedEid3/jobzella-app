@@ -14,13 +14,12 @@ const LoginPage = () => {
         overflow: 'auto',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
         py: { xs: '1rem', sm: '2rem', md: '3rem' },
       }}
     >
       <Header />
 
-      <Box component="main" my={'auto'}>
+      <Box component="main" sx={{ my: { xs: 0, sm: 'auto' } }}>
         <Container>
           <Grid container alignItems={'center'}>
             <Grid
