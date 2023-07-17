@@ -22,7 +22,7 @@ const LoginPage = () => {
 
       <Box component="main" my={'auto'}>
         <Container>
-          <Grid container spacing={2} alignItems={'center'}>
+          <Grid container alignItems={'center'}>
             <Grid
               item
               xs={12}
@@ -35,7 +35,12 @@ const LoginPage = () => {
                 alt={'computer login'}
                 width={600}
                 height={350}
-                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                style={{
+                  paddingRight: '4rem',
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain',
+                }}
               />
             </Grid>
 
