@@ -53,7 +53,7 @@ export const TasksDummy: Array<Task> = [
     description:
       "Brainstorming brings team members' diverse experience into play. ",
     assignees: [assignees[0], assignees[1], assignees[2]],
-    status: TaskStatus.IN_PROGRESS,
+    status: TaskStatus.TODO,
     group: TaskGroupsDummy[0],
     attachments: [],
     createdAt: new Date().toISOString(),
@@ -65,7 +65,7 @@ export const TasksDummy: Array<Task> = [
     description:
       "Brainstorming brings team members' diverse experience into play. ",
     assignees: [assignees[0], assignees[1], assignees[2]],
-    status: TaskStatus.DONE,
+    status: TaskStatus.TODO,
     group: TaskGroupsDummy[1],
     attachments: [],
     createdAt: new Date().toISOString(),
@@ -77,7 +77,7 @@ export const TasksDummy: Array<Task> = [
     description:
       "Brainstorming brings team members' diverse experience into play. ",
     assignees: [assignees[0], assignees[1], assignees[2]],
-    status: TaskStatus.IN_PROGRESS,
+    status: TaskStatus.DONE,
     group: TaskGroupsDummy[1],
     attachments: [],
     createdAt: new Date().toISOString(),
@@ -89,7 +89,7 @@ export const TasksDummy: Array<Task> = [
     description:
       "Brainstorming brings team members' diverse experience into play. ",
     assignees: [assignees[0], assignees[1], assignees[2]],
-    status: TaskStatus.DONE,
+    status: TaskStatus.IN_PROGRESS,
     group: TaskGroupsDummy[2],
     attachments: [],
     createdAt: new Date().toISOString(),
@@ -101,7 +101,7 @@ export const TasksDummy: Array<Task> = [
     description:
       "Brainstorming brings team members' diverse experience into play. ",
     assignees: [assignees[0], assignees[1], assignees[2]],
-    status: TaskStatus.IN_PROGRESS,
+    status: TaskStatus.DONE,
     group: TaskGroupsDummy[3],
     attachments: [],
     createdAt: new Date().toISOString(),
@@ -113,7 +113,7 @@ export const TasksDummy: Array<Task> = [
     description:
       "Brainstorming brings team members' diverse experience into play. ",
     assignees: [assignees[0], assignees[1], assignees[2]],
-    status: TaskStatus.DONE,
+    status: TaskStatus.TODO,
     group: TaskGroupsDummy[0],
     attachments: [],
     createdAt: new Date().toISOString(),
