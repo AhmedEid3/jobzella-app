@@ -1,10 +1,11 @@
 'use client';
 
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { Button, Typography } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 
 import DialogApp from '@/components/DialogApp/DialogApp';
 import useDialog from '@/components/DialogApp/useDialog';
+import InputLabelApp from '@/components/InputLabelApp';
 
 interface Props {
   variant?: 'contained' | 'dashed';
@@ -50,7 +51,34 @@ const AddTask = ({ variant = 'contained' }: Props) => {
         onClose={onClose}
         onAgree={() => {}}
       >
-        <Typography>Add Task Form</Typography>
+        <Box sx={{ py: '1.5rem' }}>
+          <Box>
+            <InputLabelApp htmlFor="name">Name</InputLabelApp>
+            <TextField
+              fullWidth
+              hiddenLabel
+              id="name"
+              variant="filled"
+              size="small"
+            />
+          </Box>
+
+          <Box>
+            <InputLabelApp htmlFor="description">Description</InputLabelApp>
+
+            <TextField
+              fullWidth
+              hiddenLabel
+              id="description"
+              variant="filled"
+              size="small"
+            />
+          </Box>
+
+          <Box>
+            <InputLabelApp htmlFor="status"> Choose status</InputLabelApp>
+          </Box>
+        </Box>
       </DialogApp>
     </>
   );

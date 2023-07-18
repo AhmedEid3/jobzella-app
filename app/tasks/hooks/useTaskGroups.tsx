@@ -1,17 +1,15 @@
 'use client';
 
-import { useState } from 'react';
-import { TaskGroupsDummy } from '@/models/dummy-data';
-import { TaskGroup } from '@/models/task';
+import { useContext } from 'react';
+
+import { TaskGroupsContext } from './TaskGroupsProvider';
 
 const useTaskGroups = () => {
-  const [taskGroups, setTaskGroups] = useState<TaskGroup[]>(TaskGroupsDummy);
-
-  const addTaskGroup = (taskGroup: TaskGroup) => {
-    setTaskGroups([...taskGroups, taskGroup]);
-  };
-
-  return { taskGroups, addTaskGroup };
+  const context = useContext(TaskGroupsContext);
+  if (context === undefined) {
+    throw new Error('useTaskGroups must be used within a TaskGroupsProvider');
+  }
+  return context;
 };
 
 export default useTaskGroups;

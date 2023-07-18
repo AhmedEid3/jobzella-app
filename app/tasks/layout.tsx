@@ -1,5 +1,10 @@
 import DashboardLayout from './components/DashboardLayout';
+import Providers from './hooks/Providers';
 
 export default function TasksLayout({ children }: React.PropsWithChildren) {
-  return <DashboardLayout>{children}</DashboardLayout>;
+  return (
+    <Providers>
+      <DashboardLayout>{children}</DashboardLayout>
+    </Providers>
+  );
 }
