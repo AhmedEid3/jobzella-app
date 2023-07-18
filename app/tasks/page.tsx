@@ -10,7 +10,7 @@ const TasksPage = () => {
   const { completedTasks, totalTasks } = useTasks();
 
   return (
-    <Box sx={{ backgroundColor: '#fbfbfb' }}>
+    <Box>
       <Grid container spacing={2} justifyContent={'space-between'}>
         <Grid item xs={12} md={6}>
           <TaskMeter
