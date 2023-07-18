@@ -37,6 +37,7 @@ const Navbar = ({ onDrawerToggle }: Props) => {
       color="transparent"
       elevation={1}
       sx={{
+        backgroundColor: 'white',
         width: { sm: `calc(100% - ${drawerWidth}px)` },
         ml: { sm: `${drawerWidth}px` },
       }}

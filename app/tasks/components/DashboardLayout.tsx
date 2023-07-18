@@ -24,8 +24,8 @@ export default function DashboardLayout({ children }: React.PropsWithChildren) {
         component="main"
         sx={{
           flexGrow: 1,
-          height: '100vh',
-          p: 3,
+          minHeight: '100vh',
+          p: '2rem 3rem',
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           backgroundColor: '#fbfbfb',
         }}
