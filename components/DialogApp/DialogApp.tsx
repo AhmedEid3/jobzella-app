@@ -26,7 +26,10 @@ function BootstrapDialogTitle(props: DialogTitleProps) {
   const { children, onClose, ...other } = props;
 
   return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+    <DialogTitle
+      sx={{ m: 0, p: 2, backgroundColor: 'secondary.main' }}
+      {...other}
+    >
       {children}
       {onClose ? (
         <IconButton
@@ -70,9 +73,11 @@ export default function DialogApp(props: Props) {
         <BootstrapDialogTitle id={title} onClose={onClose}>
           {title}
         </BootstrapDialogTitle>
-        <DialogContent dividers>{children}</DialogContent>
+        <DialogContent>{children}</DialogContent>
         <DialogActions>
           <Button
+            sx={{ mx: 'auto', px: '3rem', mb: '1rem' }}
+            size="large"
             autoFocus
             variant="contained"
             onClick={() => {
