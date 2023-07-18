@@ -9,8 +9,6 @@ const LightLogo = () => {
       width={175}
       height={48}
       style={{
-        width: '100%',
-        height: 'auto',
         objectFit: 'contain',
       }}
     />
