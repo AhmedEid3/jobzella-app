@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Box, Link as MuiLink, Typography } from '@mui/material';
 
-const HomePage = () => {
+const ForgotPasswordPage = () => {
   return (
     <Box
       sx={{
@@ -16,7 +16,7 @@ const HomePage = () => {
     >
       <Box m={'auto'}>
         <Typography align="center" color={'white'} variant="h1">
-          Home Page
+          Forgot Password Page
         </Typography>
 
         <MuiLink component={Link} href={'/login'}>
@@ -25,17 +25,7 @@ const HomePage = () => {
             color={'text.primary'}
             sx={{ textDecoration: 'underline' }}
           >
-            Login Page
-          </Typography>
-        </MuiLink>
-
-        <MuiLink component={Link} href={'/tasks'}>
-          <Typography
-            align="center"
-            color={'text.primary'}
-            sx={{ textDecoration: 'underline' }}
-          >
-            Tasks Page
+            Back to Login Page
           </Typography>
         </MuiLink>
       </Box>
@@ -43,4 +33,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default ForgotPasswordPage;
