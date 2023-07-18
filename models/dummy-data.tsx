@@ -1,6 +1,6 @@
 import { Assignee, Task, TaskGroup, TaskStatus } from '@/models/task';
 
-const assignees: Array<Assignee> = [
+export const assignees: Array<Assignee> = [
   {
     id: '1',
     name: 'John Doe',
