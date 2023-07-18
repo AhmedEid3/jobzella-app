@@ -1,8 +1,8 @@
 'use client';
 
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { Box, Button, Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 
+import AddTask from './components/AddTask';
 import TaskList from './components/TaskList';
 import TaskMeter from './components/TaskMeter';
 import { useTasks } from './hooks/useTasks';
@@ -20,13 +20,7 @@ const TasksPage = () => {
           />
         </Grid>
         <Grid item>
-          <Button
-            startIcon={<AddCircleOutlineIcon />}
-            variant="contained"
-            sx={{ width: '100%', px: 6 }}
-          >
-            Add Task
-          </Button>
+          <AddTask />
         </Grid>
       </Grid>
 

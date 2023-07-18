@@ -65,7 +65,7 @@ const TaskList = ({ tasks, title, color }: Props) => {
           zIndex: 99,
         }}
       >
-        <AddTask />
+        <AddTask variant="dashed" />
       </Box>
     </Box>
   );
