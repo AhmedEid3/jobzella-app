@@ -1,4 +1,6 @@
-import { Box, LinearProgress, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+
+import LinerProgressApp from '@/components/LinerProgressApp';
 
 interface Props {
   completedTasks: number;
@@ -17,11 +19,7 @@ const TaskMeter = ({ completedTasks, totalTasks }: Props) => {
         /<span>{totalTasks}</span>
       </Typography>
 
-      <LinearProgress
-        sx={{ height: '.625rem', borderRadius: '.625rem' }}
-        variant="determinate"
-        value={progress}
-      />
+      <LinerProgressApp value={progress} />
     </>
   );
 };
