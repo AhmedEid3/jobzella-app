@@ -1,17 +1,24 @@
 'use client';
 
+import { useState } from 'react';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { Button, Typography } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 
 import DialogApp from '@/components/DialogApp/DialogApp';
 import useDialog from '@/components/DialogApp/useDialog';
+import InputLabelApp from '@/components/InputLabelApp';
+
+import useTaskGroups from '../hooks/useTaskGroups';
 
 interface Props {
   variant?: 'contained' | 'dashed';
 }
 
 const AddTaskGroup = ({ variant = 'contained' }: Props) => {
+  const { taskGroups, addTaskGroup } = useTaskGroups();
   const { onClose, onOpen, open } = useDialog();
+
+  const [name, setName] = useState<string>('');
 
   const Contained = (
     <Button
@@ -39,6 +46,11 @@ const AddTaskGroup = ({ variant = 'contained' }: Props) => {
     />
   );
 
+  const handleAddTaskGroup = () => {
+    addTaskGroup(name);
+    setName('');
+  };
+
   return (
     <>
       {variant === 'contained' ? Contained : Dashed}
@@ -48,9 +60,21 @@ const AddTaskGroup = ({ variant = 'contained' }: Props) => {
         titleAgreeButton="Add Group"
         open={open}
         onClose={onClose}
-        onAgree={() => {}}
+        onAgree={handleAddTaskGroup}
       >
-        <Typography> Add Group Form</Typography>
+        <Box sx={{ py: '1.5rem' }}>
+          <InputLabelApp htmlFor="name">Name</InputLabelApp>
+
+          <TextField
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            fullWidth
+            hiddenLabel
+            id="name"
+            variant="filled"
+            size="small"
+          />
+        </Box>
       </DialogApp>
     </>
   );
