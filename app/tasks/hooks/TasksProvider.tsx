@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState } from 'react';
-import { TasksDummy } from '@/models/dummy-data';
+import { assignees, TaskGroupsDummy, TasksDummy } from '@/models/dummy-data';
 import { Task, TaskStatus } from '@/models/task';
 
 interface TasksContextType {
@@ -10,7 +10,7 @@ interface TasksContextType {
   totalTasks: number;
   inProgressTasks: Array<Task>;
   completedTasks: Array<Task>;
-  addTask: (task: Task) => void;
+  addTask: (name: string, description: string, status: TaskStatus) => void;
   updateTask: (task: Task) => void;
 }
 
@@ -21,8 +21,21 @@ export const TasksContext = createContext<TasksContextType | undefined>(
 const TasksProvider = ({ children }: { children: React.ReactNode }) => {
   const [tasks, setTasks] = useState<Array<Task>>(TasksDummy);
 
-  const addTask = (task: Task) => {
-    setTasks([...tasks, task]);
+  const addTask = (name: string, description: string, status: TaskStatus) => {
+    if (!name) return;
+    const task: Task = {
+      id: Math.random().toString(),
+      title: name,
+      description,
+      status,
+      assignees: [assignees[3], assignees[1], assignees[2]],
+      group: TaskGroupsDummy[0],
+      attachments: [],
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+
+    setTasks([task, ...tasks]);
   };
 
   const updateTask = (task: Task) => {
