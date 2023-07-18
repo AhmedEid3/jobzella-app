@@ -6,8 +6,8 @@ export interface Task {
   status: TaskStatus;
   group: TaskGroup;
   attachments: Attachment[];
-  createdAt: String;
-  updatedAt: String;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface Assignee {
