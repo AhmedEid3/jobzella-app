@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { Routes } from '@/routes/routes';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 
@@ -21,7 +23,9 @@ const Sidebar = ({ mobileOpen, onDrawerToggle, window }: Props) => {
   const drawer = (
     <Box sx={{ backgroundColor: 'overlay.main', height: '100%' }}>
       <ToolbarApp sx={{ mb: '2rem' }}>
-        <DarkLogo />
+        <Link href={Routes.homeLink}>
+          <DarkLogo />
+        </Link>
       </ToolbarApp>
 
       <TaskGroups />
