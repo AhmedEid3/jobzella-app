@@ -4,22 +4,22 @@ const assignees: Array<Assignee> = [
   {
     id: '1',
     name: 'John Doe',
-    avatarUrl: '/images/avatar.png',
+    avatarUrl: '/images/assignee_1.png',
   },
   {
     id: '2',
     name: 'Jane Doe',
-    avatarUrl: '/images/avatar.png',
+    avatarUrl: '/images/assignee_2.png',
   },
   {
     id: '3',
     name: 'John Smith',
-    avatarUrl: '/images/avatar.png',
+    avatarUrl: '/images/assignee_3.png',
   },
   {
     id: '4',
     name: 'Jane Smith',
-    avatarUrl: '/images/avatar.png',
+    avatarUrl: '/images/assignee_4.png',
   },
 ];
 
