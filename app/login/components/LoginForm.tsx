@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { Routes } from '@/routes/routes';
 import { Lock, Mail, Visibility, VisibilityOff } from '@mui/icons-material';
 import {
   Box,
@@ -20,6 +22,7 @@ import {
 } from '@mui/material';
 
 const LoginForm = () => {
+  const router = useRouter();
   const [rememberPassword, setRememberPAssword] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -39,7 +42,7 @@ const LoginForm = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log('submitted');
+    router.push(Routes.tasksLink);
   };
 
   return (

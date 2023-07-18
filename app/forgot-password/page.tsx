@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Routes } from '@/routes/routes';
 import { Box, Link as MuiLink, Typography } from '@mui/material';
 
 const ForgotPasswordPage = () => {
@@ -19,7 +20,7 @@ const ForgotPasswordPage = () => {
           Forgot Password Page
         </Typography>
 
-        <MuiLink component={Link} href={'/login'}>
+        <MuiLink component={Link} href={Routes.loginLink}>
           <Typography
             align="center"
             color={'text.primary'}
