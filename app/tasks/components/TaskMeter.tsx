@@ -17,7 +17,11 @@ const TaskMeter = ({ completedTasks, totalTasks }: Props) => {
         /<span>{totalTasks}</span>
       </Typography>
 
-      <LinearProgress variant="determinate" value={progress} />
+      <LinearProgress
+        sx={{ height: '.625rem', borderRadius: '.625rem' }}
+        variant="determinate"
+        value={progress}
+      />
     </>
   );
 };
