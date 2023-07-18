@@ -45,12 +45,10 @@ let theme = createTheme({
       default: '#ffffff',
     },
     todo: {
-      main: '#00587A',
-      light: '#EADBF4',
+      main: '#973FCF',
     },
     progress: {
       main: '#FFA500',
-      light: '#FCEACA',
     },
     overlay: {
       main: '#F3F3F3',
@@ -66,17 +64,45 @@ let theme = createTheme({
     h1: {
       fontSize: '3rem',
       fontWeight: 700,
-      fontStyle: 'normal',
     },
     h2: {
       fontSize: '2.5rem',
       fontWeight: 700,
-      fontStyle: 'normal',
+    },
+    h3: {
+      fontSize: '2rem',
+      fontWeight: 700,
+    },
+    h4: {
+      fontSize: '1.75rem',
+      fontWeight: 700,
+    },
+    h5: {
+      fontSize: '1.5rem',
+      fontWeight: 700,
+    },
+    h6: {
+      fontSize: '1.25rem',
+      fontWeight: 700,
     },
     subtitle1: {
       fontSize: '1.5rem',
       fontWeight: 700,
       fontStyle: 'normal',
+    },
+
+    body1: {
+      fontSize: '1rem',
+      fontWeight: 400,
+    },
+    body2: {
+      fontSize: '0.875rem',
+      fontWeight: 400,
+    },
+
+    caption: {
+      fontSize: '0.75rem',
+      fontWeight: 400,
     },
   },
 
